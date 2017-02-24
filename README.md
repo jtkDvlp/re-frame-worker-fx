@@ -1,0 +1,3 @@
+# Web workers effect handler for re-frame
+
+...will follow...
