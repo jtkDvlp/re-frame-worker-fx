@@ -10,6 +10,7 @@ This [re-frame](https://github.com/Day8/re-frame) library contains an [web worke
 ### Get it / add dependency
 
 Add the following dependency to you `project.cljs`:
+
 [![Clojars Project](https://img.shields.io/clojars/v/re-frame-worker-fx.svg)](https://clojars.org/re-frame-worker-fx)
 
 ### Usage
