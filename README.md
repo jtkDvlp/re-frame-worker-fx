@@ -33,3 +33,9 @@ The following example presupposes that there is already a worker pool and regist
              :on-success [:your-success-event]
              :on-error [:your-error-event]}}))
 ```
+
+## Appendix
+
+I´d be thankful to receive patches, comments and constructive criticism.
+
+Hope the package is useful :-)
