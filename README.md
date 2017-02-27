@@ -18,7 +18,7 @@ See the following minimal code example or the [test.cljs](https://github.com/jtk
 
 The following example presupposes that there is already a worker pool and registered worker-handler.
 
-```clojurescript
+```clojure
 (ns your.project
   (:require [re-frame.core :as re-frame]
             [re-frame-worker-fx.core]))
