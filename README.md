@@ -25,13 +25,15 @@ The following example presupposes that there is already a worker pool and regist
 
 (re-frame/reg-event-fx
  :some-event
- (fn [{:keys [worker-pool]} _]
-   {:worker {:pool worker-pool
-             :handler :your-worker-handler
-             :arguments {:a "Hallo Welt!" :b 10 :c (js/ArrayBuffer. 10)}
-             :transfer [:c]
-             :on-success [:your-success-event]
-             :on-error [:your-error-event]}}))
+ (fn [coeffects _]
+   (let [worker-pool
+         (-> coeffects :db :worker-pool)]
+     {:worker {:pool worker-pool
+               :handler :your-worker-handler
+               :arguments {:a "Hallo Welt!" :b 10 :c (js/ArrayBuffer. 10)}
+               :transfer [:c]
+               :on-success [:your-success-event]
+               :on-error [:your-error-event]}})))
 ```
 
 ## Appendix
