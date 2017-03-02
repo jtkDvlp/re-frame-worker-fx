@@ -29,7 +29,7 @@
 
   (re-frame/reg-event-fx
    :initialize
-   (fn [{:keys [db]} _]
+   (fn [_ _]
      {:db {:worker-pool (main/create-pool 2 "js/worker/worker.js")}
       :dispatch-n [[:test-worker-fx {:handler :mirror, :arguments {:a "Hallo" :b "Welt" :c 10} :on-success [:on-worker-fx-success] :on-error [:on-worker-fx-error]}]
                    [:test-worker-fx {:handler :mirror, :arguments {:a "Hallo" :b "Welt" :c 10 :d (js/ArrayBuffer. 10) :transfer [:d]} :transfer [:d] :on-success [:on-worker-fx-success] :on-error [:on-worker-fx-error]}]
