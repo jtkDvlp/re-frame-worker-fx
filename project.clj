@@ -5,7 +5,7 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.9.229"]
 
-                 [cljs-workers "1.0.1-alpha"]
+                 [cljs-workers "1.1.0-alpha"]
                  [re-frame "0.9.1"]]
 
   :min-lein-version "2.5.3"
