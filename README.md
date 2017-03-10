@@ -29,11 +29,16 @@ The following example presupposes that there is already a worker pool and regist
    (let [worker-pool
          (-> coeffects :db :worker-pool)]
      {:worker {:pool worker-pool
+               ;; handler that will be called
                :handler :your-worker-handler
+               ;; arguments applied to the handler
                :arguments {:a "Hallo Welt!" :b 10 :c (js/ArrayBuffer. 10)}
+               ;; which arguments will be transfered instead of copied
                :transfer [:c]
+               ;; dispatched on success conjoined with the result
                :on-success [:your-success-event]
-               :on-error [:your-error-event]}})))
+               ;; dispatched on error conjoined with the result
+               :on-error [:your-error-event]}})))
 ```
 
 ## Appendix
