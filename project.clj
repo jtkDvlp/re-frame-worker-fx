@@ -5,7 +5,7 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.9.229"]
 
-                 [cljs-workers "1.1.1-alpha"]
+                 [cljs-workers "1.1.2-alpha"]
                  [re-frame "0.9.1"]]
 
   :min-lein-version "2.5.3"
@@ -38,4 +38,4 @@
                 :asset-path "js/worker/out"
                 :output-to "resources/public/js/worker/worker.js"
                 :output-dir "resources/public/js/worker/out"
-                :optimizations :simple}}]})
+                :optimizations :advanced}}]})
