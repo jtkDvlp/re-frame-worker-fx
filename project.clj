@@ -1,27 +1,48 @@
-(defproject re-frame-worker-fx "1.0.3-alpha"
-  :description "A re-frame effects handler for performing async tasks via cljs-workers"
-  :url "https://github.com/jtkDvlp/re-frame-worker-fx"
-  :license {:name "MIT"}
-  :dependencies [[org.clojure/clojure "1.8.0"]
-                 [org.clojure/clojurescript "1.9.229"]
+(defproject jtk-dvlp/re-frame-worker-fx "1.0.3"
+  :description
+  "A re-frame effects handler for performing async tasks via cljs-workers"
 
-                 [cljs-workers "1.1.2-alpha"]
-                 [re-frame "0.9.1"]]
+  :url
+  "https://github.com/jtkDvlp/re-frame-worker-fx"
 
-  :min-lein-version "2.5.3"
+  :license
+  {:name "MIT"}
 
-  :source-paths ["src"]
-  :test-paths ["test"]
+  :dependencies
+  [[jtk-dvlp/cljs-workers "1.1.2"]]
 
-  :clean-targets ^{:protect false} ["resources/public/js" "target"]
+  :min-lein-version
+  "2.5.3"
 
-  :plugins [[lein-cljsbuild "1.1.4" :exclusions [[org.clojure/clojure]]]
-            [lein-figwheel "0.5.0-1"]]
+  :source-paths
+  ["src"]
 
-  :profiles {:dev {:dependencies [[figwheel-sidecar "0.5.8"]
-                                  [com.cemerick/piggieback "0.2.1"]]}}
+  :clean-targets
+  ^{:protect false}
+  ["resources/public/js"
+   "target"]
 
-  :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
+  :plugins
+  [[lein-cljsbuild "1.1.4"
+    :exclusions [[org.clojure/clojure]]]
+   [lein-figwheel "0.5.0-1"]]
+
+  :profiles
+  {:provided
+   {:dependencies
+    [[org.clojure/clojure "1.8.0"]
+     [org.clojure/clojurescript "1.9.229"]
+
+     [re-frame "0.9.1"]]}
+
+   :dev
+   {:dependencies
+    [[figwheel-sidecar "0.5.8"]
+     [com.cemerick/piggieback "0.2.1"]]}}
+
+  :repl-options
+  {:nrepl-middleware
+   [cemerick.piggieback/wrap-cljs-repl]}
 
   :cljsbuild
   {:builds
