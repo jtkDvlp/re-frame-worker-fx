@@ -1,5 +1,6 @@
 [![Clojars Project](https://img.shields.io/clojars/v/jtk-dvlp/re-frame-worker-fx.svg)](https://clojars.org/jtk-dvlp/re-frame-worker-fx)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/jtkDvlp/re-frame-worker-fx/blob/master/LICENSE)
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/donate?hosted_button_id=2PDXQMHX56T6U)
 
 # Web workers effect handler for re-frame
 
